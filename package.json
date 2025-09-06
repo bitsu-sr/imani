@@ -1,0 +1,29 @@
+{
+  "name": "imani",
+  "version": "1.0.0",
+  "description": "A personal micro-loan manager with monthly interest, built with React (Vite), Vercel Functions, and Supabase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitsu-sr/imani.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bitsu-sr/imani/issues"
+  },
+  "homepage": "https://github.com/bitsu-sr/imani#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "@vercel/node": "^5.3.21",
+    "typescript": "^5.9.2"
+  }
+}
