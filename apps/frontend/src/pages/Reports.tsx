@@ -1,16 +1,14 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 type Loan = { id: string };
 
 export default function Reports() {
-	const [loans, setLoans] = useState<Loan[]>([]);
 	const [data, setData] = useState<{ date: string; interest: number }[]>([]);
 
 	useEffect(() => {
 		(async () => {
 			const ls: Loan[] = await fetch('/api/loans').then(r => r.json());
-			setLoans(ls);
 			let map = new Map<string, number>();
 			for (const l of ls) {
 				const res = await fetch(`/api/interest?loan_id=${l.id}`).then(r => r.json());
